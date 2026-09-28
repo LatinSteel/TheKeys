@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Keys</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>The Keys</h1>
+    </header>
+    
+    <section class="filters">
+
+        <button id="filter-toggle" type="button" aria-expanded="false">
+            Filter +
+        </button>
+
+        <div id="filter-content" class="filter-content">
+
+            <div class="filters-header">
+                <h2>Filters</h2>
+
+                <button id="clear-filters" type="button">
+                    Clear Filters
+                </button>
+            </div>
+
+            <div class="filter-grid">
+
+                <div class="filter-item">
+                    <label for="filter-author">Author</label>
+                    <select id="filter-author">
+                        <option value="">All</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="filter-source">Source</label>
+                    <select id="filter-source">
+                        <option value="">All</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="filter-source-type">Source Type</label>
+                    <select id="filter-source-type">
+                        <option value="">All</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="filter-language">Language</label>
+                    <select id="filter-language">
+                        <option value="">All</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="filter-region">Region</label>
+                    <select id="filter-region">
+                        <option value="">All</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="filter-saint">Saint</label>
+                    <select id="filter-saint">
+                        <option value="">All</option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="filter-topic">Type of Papal Authority</label>
+                    <select id="filter-topic">
+                        <option value="">All</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="filter-start-year">Start Year</label>
+                    <input
+                        type="number"
+                        id="filter-start-year"
+                        placeholder="e.g. 33"
+                    >
+                </div>
+
+                <div class="filter-item">
+                    <label for="filter-end-year">End Year</label>
+                    <input
+                        type="number"
+                        id="filter-end-year"
+                        placeholder="e.g. 1054"
+                    >
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <main id="quotes-container">
+
+        <!--
+            JavaScript will generate everything here.
+
+            Example structure:
+
+            <section class="year-section">
+
+                <h2 class="year-heading">200–400 AD</h2>
+
+                <section class="author-section">
+
+                    <h3 class="author-name">St. Cyprian of Carthage</h3>
+
+                    <article class="quote">
+
+                        <blockquote>
+                            Quote text goes here.
+                        </blockquote>
+
+                        <div class="quote-info">
+                            <span>Source</span>
+                            <span>Year</span>
+                            <span>Language</span>
+                            <span>Region</span>
+                        </div>
+
+                    </article>
+
+                </section>
+
+            </section>
+        -->
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,370 @@
+/* =========================
+   Basic Page Setup
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background-color: #ffffff;
+    color: #111111;
+
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   Header
+   ========================= */
+
+.site-header {
+    width: 100%;
+    padding: 32px 40px;
+
+    border-bottom: 1px solid #111111;
+}
+
+.site-header h1 {
+    margin: 0;
+
+    font-size: 2.2rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+}
+
+
+/* =========================
+   Main Page Area
+   ========================= */
+
+#quotes-container {
+    width: min(900px, 90%);
+    margin: 0 auto;
+
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+
+
+/* =========================
+   Year Sections
+   ========================= */
+
+.year-section {
+    margin-bottom: 100px;
+}
+
+.year-heading {
+    margin: 0 0 50px 0;
+    padding-bottom: 12px;
+
+    border-bottom: 2px solid #111111;
+
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+
+/* =========================
+   Author Sections
+   ========================= */
+
+.author-section {
+    margin-bottom: 65px;
+}
+
+.author-name {
+    margin: 0 0 25px 0;
+
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+
+/* =========================
+   Individual Quotes
+   ========================= */
+
+.quote {
+    margin-bottom: 45px;
+
+    padding-left: 24px;
+
+    border-left: 2px solid #111111;
+}
+
+.quote blockquote {
+    margin: 0 0 18px 0;
+
+    font-size: 1.15rem;
+    line-height: 1.75;
+}
+
+
+/* =========================
+   Quote Information
+   ========================= */
+
+.quote-info {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 0.82rem;
+    line-height: 1.7;
+
+    color: #333333;
+}
+
+.quote-info-row {
+    display: block;
+}
+
+.quote-info-label {
+    font-weight: 600;
+}
+
+.quote-info-value {
+    font-weight: 400;
+}
+
+
+/* =========================
+   Source Links
+   ========================= */
+
+.quote-info a {
+    color: #111111;
+
+    text-decoration: none;
+}
+
+.quote-info a:hover {
+    color: #555555;
+}
+
+
+/* =========================
+   General Links
+   ========================= */
+
+a {
+    color: #111111;
+
+    text-decoration: none;
+}
+
+a:hover {
+    color: #555555;
+}
+
+/* =========================
+   Filters
+   ========================= */
+
+.filters {
+    width: min(900px, 90%);
+    margin: 35px auto 0 auto;
+
+    border-bottom: 1px solid #111111;
+}
+
+
+/* Main Filter Button */
+
+#filter-toggle {
+    width: 100%;
+
+    padding: 12px 0;
+
+    background: none;
+    color: #111111;
+
+    border: none;
+
+    text-align: left;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.2rem;
+
+    cursor: pointer;
+}
+
+
+/* Filter area starts hidden */
+
+.filter-content {
+    display: none;
+
+    padding-top: 15px;
+    padding-bottom: 35px;
+}
+
+
+/* JavaScript adds this when opened */
+
+.filter-content.open {
+    display: block;
+}
+
+
+/* Header inside filter area */
+
+.filters-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+.filters-header h2 {
+    margin: 0;
+
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+
+/* Filter Grid */
+
+.filter-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px 22px;
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-item label {
+    margin-bottom: 5px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.filter-item select,
+.filter-item input {
+    width: 100%;
+    height: 38px;
+
+    padding: 6px 9px;
+
+    background-color: #ffffff;
+    color: #111111;
+
+    border: 1px solid #aaaaaa;
+    border-radius: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.85rem;
+}
+
+.filter-item select:focus,
+.filter-item input:focus {
+    outline: 1px solid #111111;
+    border-color: #111111;
+}
+
+
+/* Clear Filters */
+
+#clear-filters {
+    padding: 6px 12px;
+
+    background-color: #ffffff;
+    color: #111111;
+
+    border: 1px solid #111111;
+
+    cursor: pointer;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.78rem;
+}
+
+#clear-filters:hover {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+/* =========================
+   Mobile Layout
+   ========================= */
+
+@media (max-width: 600px) {
+
+    @media (max-width: 600px) {
+
+    .filter-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+    }
+
+    .filters {
+    width: 90%;
+    margin-top: 30px;
+    }
+
+    .filter-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .filters-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .site-header {
+        padding: 24px 20px;
+    }
+
+    .site-header h1 {
+        font-size: 1.8rem;
+    }
+
+    #quotes-container {
+        width: 90%;
+        padding-top: 40px;
+    }
+
+    .year-section {
+        margin-bottom: 70px;
+    }
+
+    .year-heading {
+        margin-bottom: 35px;
+
+        font-size: 2rem;
+    }
+
+    .author-name {
+        font-size: 1.4rem;
+    }
+
+    .quote {
+        padding-left: 16px;
+    }
+
+    .quote blockquote {
+        font-size: 1.05rem;
+    }
+
+    .quote-info {
+        font-size: 0.78rem;
+    }
+}

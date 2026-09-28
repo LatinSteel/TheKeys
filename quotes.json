@@ -1,0 +1,450 @@
+[
+    {
+        "quote": "Wherefore the most holy and blessed Leo, archbishop of the great and elder Rome, through us, and through this present most holy synod together with the thrice blessed and all-glorious Peter the Apostle, who is the rock and foundation of the Catholic Church, and the foundation of the orthodox faith, has stripped him of the episcopate, and has alienated from him all hieratic worthiness. Therefore let this most holy and great synod sentence the before mentioned Dioscorus to the canonical penalties.",
+        "source": "Acts of the Council of Chalcedon",
+        "sourceUrl": "https://www.newadvent.org/fathers/3811.htm",
+
+        "locationInSource": "Session III",
+        "translation": "Literal translation from the Greek",
+
+        "sourceType": "Ecumenical Council",
+        "author": "Council of Chalcedon",
+        "recipient": null,
+        "notes": "The sentence against Dioscorus is pronounced in the name of Pope Leo, through his legates, together with the council and St. Peter.",
+
+        "startYear": 451,
+
+        "language": "Greek",
+        "region": "East",
+
+        "saint": false,
+
+        "topics": {
+            "The Role of Peter": true,
+            "Papal Foundation of the Church": false,
+            "Papal Headship": false,
+            "Papal Teaching Authority": true,
+            "Papal Governing Authority": true,
+            "Universal Jurisdiction": true,
+            "Ordinary Jurisdiction": true,
+            "Principle of Unity": false,
+            "Papal Infallibility": true
+        }
+    },
+    {
+        "quote": "Through the most blessed Peter, chief of the Apostles, the holy Roman Church holds the principate over all the churches of the whole world.",
+        "source": "Epistle 65",
+        "sourceUrl": "https://www.newadvent.org/fathers/3604065.htm",
+
+        "locationInSource": "Letter 65, Chapter II; PL 54, col. 881",
+        "translation": "English translation from the Latin",
+
+        "sourceType": "Episcopal Petition",
+        "author": "Bishops of the Metropolitan Province of Arles",
+        "recipient": "Pope St. Leo I",
+        "notes": "This statement is not authored by Pope Leo. It occurs in a petition sent to Leo by bishops of the province of Arles and describes the Roman Church as holding the principate over all the churches of the whole world through St. Peter.",
+
+        "startYear": 450,
+
+        "language": "Latin",
+        "region": "West",
+
+        "saint": false,
+
+        "topics": {
+            "The Role of Peter": true,
+            "Papal Foundation of the Church": false,
+            "Papal Headship": true,
+            "Papal Teaching Authority": false,
+            "Papal Governing Authority": true,
+            "Universal Jurisdiction": true,
+            "Ordinary Jurisdiction": true,
+            "Principle of Unity": false,
+            "Papal Infallibility": false
+        }
+    },
+    {
+        "quote": "For although the pastors, each one singly, preside over their flocks with a special care and know that they have to render an account for the sheep entrusted to them, we have a duty which is shared with all; in fact the function of each one is part of our work: so that when men resort to the see of the blessed Apostle Peter from the whole world, and seek from our stewardship that love of the whole Church entrusted to him by the Lord, the greater our duty to the whole, the heavier we feel the burden to rest on us. […] There is further reason for our celebration: not only the Apostolic but also the episcopal dignity of the most blessed Peter, who does not cease to preside over his see, and obtains an abiding partnership with the eternal Priest. For the stability which the rock himself was given by that Rock, Christ, he conveyed also to his successors, and wheresoever any steadfastness is apparent, there without doubt is to be seen the strength of the Shepherd.",
+        "source": "Sermon 5",
+        "sourceUrl": "https://www.newadvent.org/fathers/360305.htm",
+
+        "locationInSource": "Sermon 5, Sections II and IV; PL 54, cols. 153–155",
+        "translation": "Charles Lett Feltoe, NPNF2, Vol. 12",
+
+        "sourceType": "Papal Sermon",
+        "author": "Pope St. Leo I",
+        "recipient": null,
+        "notes": "Composite quotation from two non-contiguous sections of Sermon 5. The omitted material is indicated by an ellipsis. Leo distinguishes the particular care of individual bishops from his own care shared with all, and connects the continuing presidency of Peter in his see with Peter's successors.",
+
+        "startYear": 441,
+
+        "language": "Latin",
+        "region": "West",
+
+        "saint": true,
+
+        "topics": {
+            "The Role of Peter": true,
+            "Papal Foundation of the Church": true,
+            "Papal Headship": true,
+            "Papal Teaching Authority": false,
+            "Papal Governing Authority": true,
+            "Universal Jurisdiction": true,
+            "Ordinary Jurisdiction": true,
+            "Principle of Unity": true,
+            "Papal Infallibility": false
+        }
+    },
+    {
+        "quote": "But in this present letter the affection displayed seems to us greater than usual: for it informs us of the state of the churches, and urges us to a vigilant exercise of care, by a consideration of our office, so that being placed, as it were, on a watch-tower, according to the will of the Lord, we should both lend our approval to things when they run in accordance with our wishes, and correct, by applying the remedies of compulsion, what we observe gone wrong through any aggression: hoping that abundant fruit will be the result of our sowing the seed, if we do not allow those things to increase which have begun to spring up to the spoiling of the harvest.",
+        "source": "Letter 6",
+        "sourceUrl": "https://www.newadvent.org/fathers/3604006.htm",
+
+        "locationInSource": "Letter 6, Section I",
+        "translation": "Charles Lett Feltoe, NPNF2, Vol. 12",
+
+        "sourceType": "Papal Letter",
+        "author": "Pope St. Leo I",
+        "recipient": "Anastasius, Bishop of Thessalonica",
+        "notes": "The wording has been corrected from the secondary webpage's erroneous 'if we do now allow' to the source reading 'if we do not allow.' Leo describes his office as requiring vigilance over the churches and the correction of abuses by coercive remedies.",
+
+        "startYear": 444,
+
+        "language": "Latin",
+        "region": "West",
+
+        "saint": true,
+
+        "topics": {
+            "The Role of Peter": false,
+            "Papal Foundation of the Church": false,
+            "Papal Headship": true,
+            "Papal Teaching Authority": false,
+            "Papal Governing Authority": true,
+            "Universal Jurisdiction": true,
+            "Ordinary Jurisdiction": true,
+            "Principle of Unity": false,
+            "Papal Infallibility": false
+        }
+    },
+    {
+        "quote": "Seeing that, as my predecessors acted towards yours, so too I, following their example, have delegated my authority to you, beloved: so that you, imitating our gentleness, might assist us in the care which we owe primarily to all the churches by Divine institution, and might to a certain extent make up for our personal presence in visiting those provinces which are far off from us.",
+        "source": "Letter 14",
+        "sourceUrl": "https://www.newadvent.org/fathers/3604014.htm",
+
+        "locationInSource": "Letter 14, Section II",
+        "translation": "Charles Lett Feltoe, NPNF2, Vol. 12",
+
+        "sourceType": "Papal Letter",
+        "author": "Pope St. Leo I",
+        "recipient": "Anastasius, Bishop of Thessalonica",
+        "notes": "Leo describes Anastasius as exercising delegated papal authority and states that the care owed by the Roman bishop primarily to all the churches exists by Divine institution.",
+
+        "startYear": 446,
+
+        "language": "Latin",
+        "region": "West",
+
+        "saint": true,
+
+        "topics": {
+            "The Role of Peter": false,
+            "Papal Foundation of the Church": false,
+            "Papal Headship": true,
+            "Papal Teaching Authority": false,
+            "Papal Governing Authority": true,
+            "Universal Jurisdiction": true,
+            "Ordinary Jurisdiction": true,
+            "Principle of Unity": false,
+            "Papal Infallibility": false
+        }
+    },
+    {
+        "quote": "By God's precepts and the Apostle's admonitions we are incited to keep a careful watch over the state of all the churches: and, if anywhere ought is found that needs rebuke, to recall men with speedy care either from stupidity of ignorance or from forwardness and presumption. For inasmuch as we are warned by the Lord's own command whereby the blessed Apostle Peter had the thrice repeated mystical injunction pressed upon him, that he who loves Christ should feed Christ's sheep, we are compelled by reverence for that see which, by the abundance of the Divine Grace, we hold, to shun the danger of sloth as much as possible: lest the confession of the chief Apostle whereby he testified that he loved God be not found in us: because if he, through us, carelessly feed the flock so often commended to him he is proved not to love the Chief Shepherd.",
+        "source": "Letter 16",
+        "sourceUrl": "https://www.newadvent.org/fathers/3604016.htm",
+
+        "locationInSource": "Letter 16, Section I",
+        "translation": "Charles Lett Feltoe, NPNF2, Vol. 12",
+
+        "sourceType": "Papal Letter",
+        "author": "Pope St. Leo I",
+        "recipient": "The Bishops of Sicily",
+        "notes": "Leo connects his duty to watch over all the churches with Christ's command to Peter to feed His sheep and describes Peter as continuing to feed the flock 'through us.'",
+
+        "startYear": 447,
+
+        "language": "Latin",
+        "region": "West",
+
+        "saint": true,
+
+        "topics": {
+            "The Role of Peter": true,
+            "Papal Foundation of the Church": false,
+            "Papal Headship": true,
+            "Papal Teaching Authority": false,
+            "Papal Governing Authority": true,
+            "Universal Jurisdiction": true,
+            "Ordinary Jurisdiction": true,
+            "Principle of Unity": true,
+            "Papal Infallibility": false
+        }
+    },
+    {
+        "quote": "The devout faith of our most clement prince, knowing that it especially concerns his glory to prevent any seed of error from springing up within the Catholic Church, has paid such deference to the Divine institutions as to apply to the authority of the Apostolic See for a proper settlement: as if he wished it to be declared by the most blessed Peter himself what was praised in his confession.",
+        "source": "Letter 33",
+        "sourceUrl": "https://www.newadvent.org/fathers/3604033.htm",
+
+        "locationInSource": "Letter 33, Section I",
+        "translation": "Charles Lett Feltoe, NPNF2, Vol. 12",
+
+        "sourceType": "Papal Letter",
+        "author": "Pope St. Leo I",
+        "recipient": "The Synod of Ephesus",
+        "notes": "Leo interprets the emperor's appeal to the Apostolic See for a doctrinal settlement as though the emperor wished the matter to be declared by St. Peter himself.",
+
+        "startYear": 449,
+
+        "language": "Latin",
+        "region": "West",
+
+        "saint": true,
+
+        "topics": {
+            "The Role of Peter": true,
+            "Papal Foundation of the Church": false,
+            "Papal Headship": true,
+            "Papal Teaching Authority": true,
+            "Papal Governing Authority": true,
+            "Universal Jurisdiction": true,
+            "Ordinary Jurisdiction": false,
+            "Principle of Unity": false,
+            "Papal Infallibility": true
+        }
+    },
+    {
+        "quote": "When I began to appeal to the throne of the Apostolic See of Peter, the Prince of the Apostles, and to the whole sacred synod which is under your holiness, at once a crowd of soldiers surrounded me and barred the way when I wished to take refuge at the holy altar. […] Therefore I beseech your holiness not to permit these things to be treated with indifference, but to rise up first on behalf of the cause of our orthodox faith, now destroyed by unlawful acts; further to issue an authoritative instruction, so that a like faith may everywhere be preached, by the assembly of a united synod of the fathers, both eastern and western. Thus the laws of the fathers may prevail and all that has been done amiss be rendered null and void: bring healing to this ghastly wound.",
+        "source": "Appeal of Flavian of Constantinople to Pope Leo I",
+        "sourceUrl": "https://earlychurchtexts.com/public/flavian_appeal_to_leo.htm",
+
+        "locationInSource": "Appeal following the Second Council of Ephesus",
+        "translation": "English translation based on T. A. Lacey's Appellatio Flaviani",
+
+        "sourceType": "Episcopal Appeal",
+        "author": "St. Flavian of Constantinople",
+        "recipient": "Pope St. Leo I",
+        "notes": "Written after the Second Council of Ephesus in 449. Flavian appeals to the throne of the Apostolic See of Peter and asks Leo to intervene, issue an authoritative instruction concerning the faith, and arrange a united eastern and western synod. 'Under your holiness' is preferable to the secondary quotation's wording 'obedient to your holiness.'",
+
+        "startYear": 449,
+
+        "language": "Greek",
+        "region": "East",
+
+        "saint": true,
+
+        "topics": {
+            "The Role of Peter": true,
+            "Papal Foundation of the Church": false,
+            "Papal Headship": true,
+            "Papal Teaching Authority": true,
+            "Papal Governing Authority": true,
+            "Universal Jurisdiction": true,
+            "Ordinary Jurisdiction": false,
+            "Principle of Unity": true,
+            "Papal Infallibility": false
+        }
+    },
+    {
+        "quote": "The synod held at Ephesus is alleged to have rather stirred up hatred and contention, intimidating by the presence of soldiers Flavian, the bishop of Constantinople, because he had sent an appeal to the Apostolic See, and to all the bishops of these parts by the hands of those who had been deputed to attend the Synod by the most reverend bishop of Rome. […] For this cause we pray your clemency to oppose such disturbances with the Truth, and to order the faith of the Catholic religion to be preserved without spot, in order that according to the standard and decision of the Apostolic See, which we likewise revere as pre-eminent, Flavian may remain altogether uninjured in his priestly office, and the matter be referred to the Synod of the Apostolic See, wherein assuredly He first adorned primacy, who was deemed worthy to receive the Keys of heaven: for it becomes us in all things to maintain the respect due to this great city which is the mistress of all the earth.",
+        "source": "Letter 56",
+        "sourceUrl": "https://www.newadvent.org/fathers/3604056.htm",
+
+        "locationInSource": "Letter 56",
+        "translation": "Charles Lett Feltoe, NPNF2, Vol. 12",
+
+        "sourceType": "Imperial Letter",
+        "author": "Galla Placidia Augusta",
+        "recipient": "Emperor Theodosius II",
+        "notes": "The text preserved among Leo's correspondence is authored by Galla Placidia, not by Leo. This version restores the important clause omitted in the secondary webpage quotation concerning Flavian remaining in office and the matter being referred to the Synod of the Apostolic See.",
+
+        "startYear": 450,
+
+        "language": "Latin",
+        "region": "West",
+
+        "saint": false,
+
+        "topics": {
+            "The Role of Peter": true,
+            "Papal Foundation of the Church": false,
+            "Papal Headship": true,
+            "Papal Teaching Authority": true,
+            "Papal Governing Authority": true,
+            "Universal Jurisdiction": true,
+            "Ordinary Jurisdiction": false,
+            "Principle of Unity": true,
+            "Papal Infallibility": false
+        }
+    },
+    {
+        "quote": "The Emperor has desired your holy brotherhood to assemble for the purpose of destroying the snares of the devil and restoring the peace of the Church, so far respecting the rights and dignity of the most blessed Apostle Peter as to invite us too by letter to vouchsafe our presence at your venerable Synod.",
+        "source": "Letter 93",
+        "sourceUrl": "https://www.newadvent.org/fathers/3604093.htm",
+
+        "locationInSource": "Letter 93, Section I",
+        "translation": "Charles Lett Feltoe, NPNF2, Vol. 12",
+
+        "sourceType": "Papal Letter",
+        "author": "Pope St. Leo I",
+        "recipient": "The Council of Chalcedon",
+        "notes": "Leo explains the emperor's invitation to the Council of Chalcedon as respecting the rights and dignity of St. Peter, whose see Leo occupied.",
+
+        "startYear": 451,
+
+        "language": "Latin",
+        "region": "West",
+
+        "saint": true,
+
+        "topics": {
+            "The Role of Peter": true,
+            "Papal Foundation of the Church": false,
+            "Papal Headship": false,
+            "Papal Teaching Authority": false,
+            "Papal Governing Authority": false,
+            "Universal Jurisdiction": false,
+            "Ordinary Jurisdiction": false,
+            "Principle of Unity": false,
+            "Papal Infallibility": false
+        }
+    },
+    {
+        "quote": "For if where two or three are gathered together in His name, He has said that there He is in the midst of them, must He not have been much more particularly present with 520 priests, who preferred the spread of knowledge concerning Him to their country and their ease? Of whom you were chief, as the head to the members, showing your goodwill in the person of those who represented you; while our religious Emperors presided to the furtherance of due order. […] And besides all this, he stretched forth his fury even against him who had been charged with the custody of the vine by the Saviour, we mean of course, your holiness. […] Accordingly, we entreat you, honour our decision by your assent, and as we have yielded to the head our agreement on things honourable, so may the head also fulfil for the children what is fitting.",
+        "source": "Letter 98",
+        "sourceUrl": "https://www.newadvent.org/fathers/3604098.htm",
+
+        "locationInSource": "Letter 98, Sections I-II and IV",
+        "translation": "Charles Lett Feltoe, NPNF2, Vol. 12",
+
+        "sourceType": "Ecumenical Council Letter",
+        "author": "Council of Chalcedon",
+        "recipient": "Pope St. Leo I",
+        "notes": "Composite excerpt from the Council of Chalcedon's letter to Leo. The council describes Leo as chief over the assembled bishops 'as the head to the members,' refers to him as charged by the Saviour with custody of the vine, and asks him to confirm its decision. The final request for assent occurs in the context of the council's Constantinopolitan settlement associated with Canon 28.",
+
+        "startYear": 451,
+
+        "language": "Greek",
+        "region": "East",
+
+        "saint": false,
+
+        "topics": {
+            "The Role of Peter": false,
+            "Papal Foundation of the Church": false,
+            "Papal Headship": true,
+            "Papal Teaching Authority": true,
+            "Papal Governing Authority": true,
+            "Universal Jurisdiction": true,
+            "Ordinary Jurisdiction": false,
+            "Principle of Unity": true,
+            "Papal Infallibility": false
+        }
+    },
+    {
+        "quote": "But the bishops' assents, which are opposed to the regulations of the holy canons composed at Nicaea, in conjunction with your faithful Grace, we do not recognize, and by the blessed Apostle Peter's authority we absolutely dis-annul in comprehensive terms.",
+        "source": "Letter 105",
+        "sourceUrl": "https://www.newadvent.org/fathers/3604105.htm",
+
+        "locationInSource": "Letter 105, Section III",
+        "translation": "Charles Lett Feltoe, NPNF2, Vol. 12",
+
+        "sourceType": "Papal Letter",
+        "author": "Pope St. Leo I",
+        "recipient": "Pulcheria Augusta",
+        "notes": "Leo rejects the bishops' assents connected with Canon 28 of Chalcedon and states that he annuls them by the authority of St. Peter.",
+
+        "startYear": 452,
+
+        "language": "Latin",
+        "region": "West",
+
+        "saint": true,
+
+        "topics": {
+            "The Role of Peter": true,
+            "Papal Foundation of the Church": false,
+            "Papal Headship": true,
+            "Papal Teaching Authority": false,
+            "Papal Governing Authority": true,
+            "Universal Jurisdiction": true,
+            "Ordinary Jurisdiction": true,
+            "Principle of Unity": false,
+            "Papal Infallibility": false
+        }
+    },
+    {
+        "quote": "As for those things which the universal Council of Chalcedon recently ordained in favor of the church of Constantinople, let Your Holiness be sure that there was no fault in me, who from my youth have always loved peace and quiet, keeping myself in humility. It was the most reverend clergy of the church of Constantinople who were eager about it, and they were equally supported by the most reverend priests of those parts, who agreed about it. Even so, the whole force of confirmation of the acts was reserved for the authority of Your Blessedness. Therefore, let Your Holiness know for certain that I did nothing to further the matter, knowing always that I held myself bound to avoid the lusts of pride and covetousness.",
+        "source": "Letter 132",
+        "sourceUrl": "https://la.wikisource.org/wiki/Epistolae_(Leo_I)/14",
+
+        "locationInSource": "Letter 132; PL 54",
+        "translation": "English translation corresponding to the Latin textual tradition",
+
+        "sourceType": "Patriarchal Letter",
+        "author": "Anatolius of Constantinople",
+        "recipient": "Pope St. Leo I",
+        "notes": "Written concerning the privileges granted to Constantinople at Chalcedon. Anatolius does not explicitly say that he rejects Canon 28; rather, he distances himself from responsibility for it and states that the entire force and confirmation of the acts was reserved to Leo's authority.",
+
+        "startYear": 452,
+
+        "language": "Greek",
+        "region": "East",
+
+        "saint": true,
+
+        "topics": {
+            "The Role of Peter": false,
+            "Papal Foundation of the Church": false,
+            "Papal Headship": true,
+            "Papal Teaching Authority": false,
+            "Papal Governing Authority": true,
+            "Universal Jurisdiction": true,
+            "Ordinary Jurisdiction": false,
+            "Principle of Unity": false,
+            "Papal Infallibility": false
+        }
+    },
+    {
+        "quote": "But blessed be our God, whose invincible Truth has shown you free from all taint of heresy in the judgment of the Apostolic See. To whom you will repay due thanks for all these labours, if you keep yourself such a defender of the universal Church as we have proved and do still prove you. For that God has dispelled all calumnious fallacies, we attribute to the blessed Peter's wondrous care of us all, for after sanctioning the judgment of his See in defining the Faith, he allowed no sinister imputation to rest on any of you, who have laboured with us for the Catholic Faith.",
+        "source": "Letter 120",
+        "sourceUrl": "https://www.newadvent.org/fathers/3604120.htm",
+
+        "locationInSource": "Letter 120, Section V",
+        "translation": "Charles Lett Feltoe, NPNF2, Vol. 12",
+
+        "sourceType": "Papal Letter",
+        "author": "Pope St. Leo I",
+        "recipient": "Theodoret of Cyrus",
+        "notes": "Leo refers to the judgment of the Apostolic See concerning Theodoret's orthodoxy and attributes the successful definition of the faith to St. Peter's care, describing Peter as sanctioning the judgment of his See.",
+
+        "startYear": 453,
+
+        "language": "Latin",
+        "region": "West",
+
+        "saint": true,
+
+        "topics": {
+            "The Role of Peter": true,
+            "Papal Foundation of the Church": false,
+            "Papal Headship": true,
+            "Papal Teaching Authority": true,
+            "Papal Governing Authority": true,
+            "Universal Jurisdiction": true,
+            "Ordinary Jurisdiction": false,
+            "Principle of Unity": true,
+            "Papal Infallibility": true
+        }
+    }
+]
