@@ -42,6 +42,8 @@ fetch("quotes.json")
 
         // Generate filter options from JSON
         buildFilters(allQuotes);
+        setupMultiSelects();
+        updateAvailableFilters();
 
         // Show everything initially
         displayQuotes(allQuotes);
@@ -171,9 +173,11 @@ function getUniqueValues(quotes, property) {
                     value !== ""
                 )
         )
-    ].sort((a, b) =>
-        String(a).localeCompare(String(b))
-    );
+    ].sort((a, b) => {
+        const nameA = property === 'author' ? getAuthorSortName(a) : String(a);
+        const nameB = property === 'author' ? getAuthorSortName(b) : String(b);
+        return nameA.localeCompare(nameB) || String(a).localeCompare(String(b));
+    });
 }
 
 
@@ -324,57 +328,28 @@ function setupFilterListeners() {
 // Apply Filters
 // ================================
 
-function applyFilters() {
+function readFilters() {
+    const filters = {};
+    for (const [id, key] of Object.entries(filterKeys)) {
+        const element = document.getElementById(id);
+        filters[key] = multiFilterIds.includes(id) ? getSelectedValues(id) : element.value;
+    }
+    filters.startYear = filters.startYear === '' ? null : Number(filters.startYear);
+    filters.endYear = filters.endYear === '' ? null : Number(filters.endYear);
+    return filters;
+}
 
-    const author =
-        document.getElementById("filter-author").value;
+function matchesFilters(quote, filters) {
+    const {author, source, sourceType, language, region, saint, topic, startYear, endYear} = filters;
 
-    const source =
-        document.getElementById("filter-source").value;
-
-    const sourceType =
-        document.getElementById("filter-source-type").value;
-
-    const language =
-        document.getElementById("filter-language").value;
-
-    const region =
-        document.getElementById("filter-region").value;
-
-    const saint =
-        document.getElementById("filter-saint").value;
-
-    const topic =
-        document.getElementById("filter-topic").value;
-
-    const startYearInput =
-        document.getElementById("filter-start-year").value;
-
-    const endYearInput =
-        document.getElementById("filter-end-year").value;
-
-
-    const startYear =
-        startYearInput === ""
-            ? null
-            : Number(startYearInput);
-
-    const endYear =
-        endYearInput === ""
-            ? null
-            : Number(endYearInput);
-
-
-    const filteredQuotes =
-        allQuotes.filter(quote => {
 
             // ----------------
             // Author
             // ----------------
 
             if (
-                author &&
-                quote.author !== author
+                author.length > 0 &&
+                !author.includes(quote.author)
             ) {
                 return false;
             }
@@ -385,8 +360,8 @@ function applyFilters() {
             // ----------------
 
             if (
-                source &&
-                quote.source !== source
+                source.length > 0 &&
+                !source.includes(quote.source)
             ) {
                 return false;
             }
@@ -397,8 +372,8 @@ function applyFilters() {
             // ----------------
 
             if (
-                sourceType &&
-                quote.sourceType !== sourceType
+                sourceType.length > 0 &&
+                !sourceType.includes(quote.sourceType)
             ) {
                 return false;
             }
@@ -409,8 +384,8 @@ function applyFilters() {
             // ----------------
 
             if (
-                language &&
-                quote.language !== language
+                language.length > 0 &&
+                !language.includes(quote.language)
             ) {
                 return false;
             }
@@ -421,8 +396,8 @@ function applyFilters() {
             // ----------------
 
             if (
-                region &&
-                quote.region !== region
+                region.length > 0 &&
+                !region.includes(quote.region)
             ) {
                 return false;
             }
@@ -449,11 +424,11 @@ function applyFilters() {
             // Topic
             // ----------------
 
-            if (topic) {
+            if (topic.length > 0) {
 
                 if (
                     !quote.topics ||
-                    quote.topics[topic] !== true
+                    !topic.some(value => quote.topics[value] === true)
                 ) {
                     return false;
                 }
@@ -493,10 +468,13 @@ function applyFilters() {
 
 
             return true;
-        });
 
+}
 
-    displayQuotes(filteredQuotes);
+function applyFilters(event) {
+    updateAvailableFilters(event?.target?.id);
+    const filters = readFilters();
+    displayQuotes(allQuotes.filter(quote => matchesFilters(quote, filters)));
 }
 
 
@@ -516,6 +494,12 @@ function clearFilters() {
     document.getElementById("filter-start-year").value = "";
     document.getElementById("filter-end-year").value = "";
 
+    document.querySelectorAll('.multi-select').forEach(dropdown => {
+        dropdown.querySelectorAll('input[type=checkbox]').forEach(input => { input.checked = false; });
+        dropdown.querySelector('summary').textContent = 'All';
+        dropdown.open = false;
+    });
+    updateAvailableFilters();
     displayQuotes(allQuotes);
 }
 
@@ -910,4 +894,153 @@ function createQuoteElement(quote) {
     article.appendChild(info);
 
     return article;
+}
+// Checkbox dropdowns retain native selects as the filter data source.
+function getSelectedValues(id) {
+    return Array.from(document.getElementById(id).selectedOptions)
+        .map(option => option.value).filter(Boolean);
+}
+
+function setupMultiSelects() {
+    const ids = ['filter-author', 'filter-source', 'filter-source-type',
+        'filter-language', 'filter-region', 'filter-topic'];
+    ids.forEach(id => {
+        const select = document.getElementById(id);
+        const label = document.querySelector(`label[for="${id}"]`);
+        select.multiple = true;
+        select.hidden = true;
+        select.value = '';
+        const dropdown = document.createElement('details');
+        dropdown.className = 'multi-select';
+        const summary = document.createElement('summary');
+        summary.id = `${id}-toggle`;
+        summary.textContent = 'All';
+        summary.setAttribute('aria-labelledby', `${id}-label ${summary.id}`);
+        label.id = `${id}-label`;
+        label.htmlFor = summary.id;
+        dropdown.appendChild(summary);
+        const options = document.createElement('div');
+        options.className = 'multi-select-options';
+        const clear = document.createElement('button');
+        clear.type = 'button';
+        clear.textContent = 'Clear selection';
+        options.appendChild(clear);
+        const updateSummary = () => {
+            const selected = Array.from(select.selectedOptions).filter(option => option.value);
+            summary.textContent = selected.length === 0 ? 'All'
+                : selected.length === 1 ? selected[0].textContent : `${selected.length} selected`;
+        };
+        Array.from(select.options).filter(option => option.value).forEach(option => {
+            const row = document.createElement('label');
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.value = option.value;
+            checkbox.addEventListener('change', () => {
+                option.selected = checkbox.checked;
+                updateSummary();
+                select.dispatchEvent(new Event('change', { bubbles: true }));
+            });
+            row.append(checkbox, document.createTextNode(option.textContent));
+            options.appendChild(row);
+        });
+        clear.addEventListener('click', () => {
+            Array.from(select.options).forEach(option => { option.selected = false; });
+            options.querySelectorAll('input').forEach(input => { input.checked = false; });
+            updateSummary();
+            select.dispatchEvent(new Event('change', { bubbles: true }));
+        });
+        dropdown.appendChild(options);
+        select.after(dropdown);
+        dropdown.addEventListener('toggle', () => {
+            if (dropdown.open) document.querySelectorAll('.multi-select').forEach(other => {
+                if (other !== dropdown) other.open = false;
+            });
+        });
+        dropdown.addEventListener('keydown', event => {
+            if (event.key === 'Escape') { dropdown.open = false; summary.focus(); }
+        });
+    });
+    document.addEventListener('click', event => {
+        document.querySelectorAll('.multi-select').forEach(dropdown => {
+            if (!dropdown.contains(event.target)) dropdown.open = false;
+        });
+    });
+}
+
+const multiFilterIds = ['filter-author', 'filter-source', 'filter-source-type',
+    'filter-language', 'filter-region', 'filter-topic'];
+const filterKeys = {
+    'filter-author': 'author', 'filter-source': 'source', 'filter-source-type': 'sourceType',
+    'filter-language': 'language', 'filter-region': 'region', 'filter-topic': 'topic',
+    'filter-saint': 'saint', 'filter-start-year': 'startYear', 'filter-end-year': 'endYear'
+};
+
+function availableValues(id, filters) {
+    const key = filterKeys[id];
+    const candidates = allQuotes.filter(quote => matchesFilters(quote,
+        {...filters, [key]: id === 'filter-saint' ? '' : []}));
+    if (key === 'topic') return new Set(candidates.flatMap(quote =>
+        Object.entries(quote.topics || {}).filter(([, enabled]) => enabled === true).map(([name]) => name)));
+    return new Set(candidates.map(quote => String(quote[key])));
+}
+
+function updateAvailableFilters(changedId) {
+    const categoricalIds = [...multiFilterIds, 'filter-saint'];
+    // Resolve conflicts in favor of the user's most recent selection.
+    if (changedId && filterKeys[changedId]) {
+        const newest = readFilters();
+        const onlyNewest = {author:[], source:[], sourceType:[], language:[], region:[],
+            topic:[], saint:'', startYear:null, endYear:null};
+        onlyNewest[filterKeys[changedId]] = newest[filterKeys[changedId]];
+        for (const id of categoricalIds) {
+            if (id === changedId) continue;
+            const allowed = availableValues(id, onlyNewest);
+            const select = document.getElementById(id);
+            for (const option of select.options) {
+                if (option.value && !allowed.has(option.value)) option.selected = false;
+            }
+            if (id === 'filter-saint' && !allowed.has(select.value)) select.value = '';
+        }
+    }
+    // Remove remaining incompatible categorical selections until stable.
+    for (let pass = 0; pass < categoricalIds.length; pass++) {
+        let removed = false;
+        for (const id of categoricalIds) {
+            if (id === changedId) continue;
+            const allowed = availableValues(id, readFilters());
+            const select = document.getElementById(id);
+            for (const option of select.options) {
+                if (option.value && option.selected && !allowed.has(option.value)) {
+                    option.selected = false;
+                    removed = true;
+                }
+            }
+            if (id === 'filter-saint' && !allowed.has(select.value)) select.value = '';
+        }
+        if (!removed) break;
+    }
+    const filters = readFilters();
+    for (const id of categoricalIds) {
+        const allowed = availableValues(id, filters);
+        const select = document.getElementById(id);
+        for (const option of select.options) {
+            option.hidden = !!option.value && !allowed.has(option.value);
+            option.disabled = option.hidden;
+        }
+        if (id === 'filter-saint') continue;
+        const dropdown = select.nextElementSibling;
+        for (const checkbox of dropdown.querySelectorAll('input[type=checkbox]')) {
+            const option = Array.from(select.options).find(option => option.value === checkbox.value);
+            checkbox.checked = option.selected;
+            checkbox.closest('label').hidden = option.hidden;
+        }
+        const selected = Array.from(select.selectedOptions).filter(option => option.value);
+        dropdown.querySelector('summary').textContent = selected.length === 0 ? 'All'
+            : selected.length === 1 ? selected[0].textContent : selected.length + ' selected';
+    }
+}
+
+// Ignore honorifics only when alphabetizing the author filter.
+function getAuthorSortName(author) {
+    return String(author).replace(/^(?:(?:Pope|St\.)\s+)+/i, '').trim();
 }
