@@ -496,6 +496,8 @@ function clearFilters() {
 
     document.querySelectorAll('.multi-select').forEach(dropdown => {
         dropdown.querySelectorAll('input[type=checkbox]').forEach(input => { input.checked = false; });
+        const search = dropdown.querySelector('.filter-search');
+        if (search) search.value = '';
         dropdown.querySelector('summary').textContent = 'All';
         dropdown.open = false;
     });
@@ -921,6 +923,15 @@ function setupMultiSelects() {
         dropdown.appendChild(summary);
         const options = document.createElement('div');
         options.className = 'multi-select-options';
+        if (['filter-author', 'filter-source', 'filter-source-type'].includes(id)) {
+            const search = document.createElement('input');
+            search.type = 'search';
+            search.className = 'filter-search';
+            search.placeholder = 'Search ' + label.textContent.toLowerCase() + '…';
+            search.setAttribute('aria-label', 'Search ' + label.textContent.toLowerCase() + ' choices');
+            search.addEventListener('input', () => filterDropdownChoices(dropdown));
+            options.appendChild(search);
+        }
         const clear = document.createElement('button');
         clear.type = 'button';
         clear.textContent = 'Clear selection';
@@ -943,9 +954,15 @@ function setupMultiSelects() {
             row.append(checkbox, document.createTextNode(option.textContent));
             options.appendChild(row);
         });
+        const noMatches = document.createElement('p');
+        noMatches.className = 'filter-no-matches';
+        noMatches.setAttribute('role', 'status');
+        noMatches.textContent = 'No matching choices.';
+        noMatches.hidden = true;
+        options.appendChild(noMatches);
         clear.addEventListener('click', () => {
             Array.from(select.options).forEach(option => { option.selected = false; });
-            options.querySelectorAll('input').forEach(input => { input.checked = false; });
+            options.querySelectorAll('input[type=checkbox]').forEach(input => { input.checked = false; });
             updateSummary();
             select.dispatchEvent(new Event('change', { bubbles: true }));
         });
@@ -1032,8 +1049,9 @@ function updateAvailableFilters(changedId) {
         for (const checkbox of dropdown.querySelectorAll('input[type=checkbox]')) {
             const option = Array.from(select.options).find(option => option.value === checkbox.value);
             checkbox.checked = option.selected;
-            checkbox.closest('label').hidden = option.hidden;
+            checkbox.closest('label').dataset.unavailable = String(option.hidden);
         }
+        filterDropdownChoices(dropdown);
         const selected = Array.from(select.selectedOptions).filter(option => option.value);
         dropdown.querySelector('summary').textContent = selected.length === 0 ? 'All'
             : selected.length === 1 ? selected[0].textContent : selected.length + ' selected';
@@ -1043,4 +1061,21 @@ function updateAvailableFilters(changedId) {
 // Ignore honorifics only when alphabetizing the author filter.
 function getAuthorSortName(author) {
     return String(author).replace(/^(?:(?:Pope|St\.)\s+)+/i, '').trim();
+}
+
+function matchesChoiceSearch(text, query) {
+    const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    const name = normalize(text);
+    return normalize(query).trim().split(/\s+/).every(word => name.includes(word));
+}
+
+function filterDropdownChoices(dropdown) {
+    const query = dropdown.querySelector('.filter-search')?.value || '';
+    let visibleCount = 0;
+    for (const checkbox of dropdown.querySelectorAll('input[type=checkbox]')) {
+        const row = checkbox.closest('label');
+        row.hidden = row.dataset.unavailable === 'true' || !matchesChoiceSearch(row.textContent, query);
+        if (!row.hidden) visibleCount++;
+    }
+    dropdown.querySelector('.filter-no-matches').hidden = visibleCount > 0;
 }
